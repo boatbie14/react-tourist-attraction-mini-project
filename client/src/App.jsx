@@ -73,11 +73,11 @@ function App() {
             <p>{isFirstSearch}</p>
           </div>
         ) : (
-          <div className="flex flex-col gap-20">
+          <div className="travel-list-wrap">
             {travelData.map((data) => {
               return (
                 <div key={data.eid} className="travel-list">
-                  <div className=" w-1/3">
+                  <div className="">
                     <img className="highlight-img" src={data.photos[0]} />
                   </div>
                   <div className="travel-info">

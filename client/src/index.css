@@ -15,11 +15,11 @@ h1 {
 }
 
 .row {
-  @apply w-full p-8;
+  @apply w-full p-6 md:p-8;
 }
 
 .container {
-  @apply w-[960px] m-auto;
+  @apply w-full md:w-[960px] m-auto;
 }
 
 .travel-search-wrap {
@@ -27,34 +27,43 @@ h1 {
 }
 
 .travel-search-wrap label {
-  @apply w-2/3 pb-4 m-auto font-kanit;
+  @apply w-full md:w-2/3 pb-4 m-auto font-kanit;
 }
 
 input.travel-search {
-  @apply w-2/3 border-b-gray-500 border-b-1 text-center m-auto font-kanit;
+  @apply w-full md:w-2/3 border-b-gray-500 border-b-1 text-center m-auto font-kanit;
 }
 
 input.travel-search:focus {
   @apply border-0 border-b border-b-black outline-none;
 }
 
+.no-results {
+  @apply font-kanit text-[#CFCFCF] text-center;
+}
+
+.no-results img {
+  @apply m-auto;
+}
+
+.travel-list-wrap {
+  @apply flex flex-col gap-20;
+}
+
 .travel-list {
-  @apply flex gap-8 font-kanit;
+  @apply flex flex-col md:flex-row gap-8 font-kanit;
+}
+
+.travel-list .img-wrap {
+  @apply w-full md:w-1/3;
 }
 
 .travel-list img.highlight-img {
   @apply w-full h-60 rounded-2xl object-cover object-center;
 }
 
-.no-results {
-  @apply font-kanit text-[#CFCFCF] text-center;
-}
-.no-results img {
-  @apply m-auto;
-}
-
 .travel-info {
-  @apply flex flex-col gap-1.5 w-2/3;
+  @apply flex flex-col gap-4 md:gap-1.5 w-full md:w-2/3;
 }
 
 .travel-info h2 {
@@ -98,7 +107,7 @@ input.travel-search:focus {
 }
 
 .travel-info button.travel-link {
-  @apply flex justify-center items-center w-[40px] h-[40px] border-1 border-[#2D9DD0] rounded-full absolute right-0 top-[-40px] cursor-pointer;
+  @apply flex justify-center items-center w-[40px] h-[40px] border-1 border-[#2D9DD0] rounded-full absolute right-0 top-[-56px] md:top-[-40px] cursor-pointer;
 }
 
 .travel-info button.travel-link svg {
