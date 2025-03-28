@@ -43,7 +43,14 @@ input.travel-search:focus {
 }
 
 .travel-list img.highlight-img {
-  @apply w-1/3 rounded-2xl;
+  @apply w-full h-60 rounded-2xl object-cover object-center;
+}
+
+.no-results {
+  @apply font-kanit text-[#CFCFCF] text-center;
+}
+.no-results img {
+  @apply m-auto;
 }
 
 .travel-info {
@@ -67,27 +74,35 @@ input.travel-search:focus {
 }
 
 .travel-info .tag {
-  @apply flex gap-4 text-gray-500;
+  @apply flex gap-4 text-gray-500 text-sm;
 }
 
 .travel-info .tag ul {
-  @apply flex gap-4;
+  @apply flex flex-row gap-4 flex-wrap;
 }
 
-.travel-info .tag ul li a {
-  @apply text-gray-500;
+.travel-info .tag ul li {
+  @apply text-gray-500 underline cursor-pointer;
 }
 
 .travel-info .img-list {
   @apply flex gap-4 pt-2;
 }
 
-.travel-info .img-list img {
-  @apply rounded-xl;
+.travel-info .img-list .item {
+  @apply w-[80px] h-[80px];
 }
 
-.travel-info .travel-link {
-  @apply flex justify-center items-center w-[40px] h-[40px] border-1 border-[#2D9DD0] rounded-full absolute right-0 top-[-40px];
+.travel-info .img-list .item img {
+  @apply w-full h-[80px] rounded-xl object-cover object-center;
+}
+
+.travel-info button.travel-link {
+  @apply flex justify-center items-center w-[40px] h-[40px] border-1 border-[#2D9DD0] rounded-full absolute right-0 top-[-40px] cursor-pointer;
+}
+
+.travel-info button.travel-link svg {
+  @apply fill-[#2D9DD0];
 }
 
 .travel-info .travel-link:hover,
